@@ -1,4 +1,12 @@
-# ToolsForMy 测试说明 (TESTING.md)
+# ToolsForMy 测试说明
+- 测试完成：是（2026-10-04）
+- 测试日期：2026-10-04
+- 测试内容：单元覆盖 `TimeUtil`（标准格式/时间戳解析/回退）、`JsonUtil`（build/parse/stringify）、`LogUtil`（stdout 捕获日志前缀与 Map 美化）、`Tokenizer`（英文整词/短词过滤/词长排序/中文分词）；注入测试覆盖畸形与空 JSON 回退、JSON 串值内 SQL/HTML 载荷仅作数据、Tokenizer 剥离 `< > ( )` 等 XSS 标记、乱入时间与超长数字输入；本仓库为纯静态工具类，无钩子/事件机制。
+- 运行命令：javac + JUnit Console Launcher（无 Maven/Gradle，见下文）
+- 测试框架：JUnit 5 (Jupiter)
+- 模型：豆包（Doubao）生成
+
+---
 
 本仓库为无构建工具的零散 Java 工具类（默认包）。测试统一放在 `src/test/`，使用 JUnit 5 (Jupiter)。
 
